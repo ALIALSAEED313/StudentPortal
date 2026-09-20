@@ -2,8 +2,51 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="bg-primary text-white rounded-3 p-5 mb-4 shadow-sm text-center text-md-start">
+    <div class="container-fluid py-3">
+        <h1 class="display-4 fw-bold mb-3">Welcome to StudentPortal</h1>
+        <p class="fs-5 text-white-50 col-md-10 mb-4">
+            Your centralized portal for academic progress, course registration, and campus news.
+        </p>
+    </div>
 </div>
-<p>Updated home page</p>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4 text-center">
+                <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 56px; height: 56px;">
+                    <i class="bi bi-people-fill fs-4"></i>
+                </div>
+                <h2 class="h5 fw-bold">Students Directory</h2>
+                <p class="text-muted small">View registered students, check academic profiles, or add new enrollments.</p>
+                <a asp-controller="Students" asp-action="List" class="btn btn-outline-primary btn-sm px-3">Go to Students</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4 text-center">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 56px; height: 56px;">
+                    <i class="bi bi-person-plus-fill fs-4"></i>
+                </div>
+                <h2 class="h5 fw-bold">Quick Enrollment</h2>
+                <p class="text-muted small">Quickly register a new student profile into the portal database.</p>
+                <a asp-controller="Students" asp-action="Add" class="btn btn-outline-success btn-sm px-3">Add Student</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4 text-center">
+                <div class="bg-info bg-opacity-10 text-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 56px; height: 56px;">
+                    <i class="bi bi-shield-lock-fill fs-4"></i>
+                </div>
+                <h2 class="h5 fw-bold">Data Privacy</h2>
+                <p class="text-muted small">Review data management compliance policies and portal safety standards.</p>
+                <a asp-controller="Home" asp-action="Privacy" class="btn btn-outline-info btn-sm px-3">Read Policy</a>
+            </div>
+        </div>
+    </div>
+</div>
+
