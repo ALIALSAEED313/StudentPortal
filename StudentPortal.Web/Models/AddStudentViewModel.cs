@@ -1,9 +1,7 @@
-﻿namespace StudentPortal.Web.Models.Entities
+﻿namespace StudentPortal.Web.Models
 {
-    public class Student
+    public class AddStudentViewModel
     {
-        public Guid Id { get; set; }
-
         public string Name { get; set; }
 
         public string Email { get; set; }

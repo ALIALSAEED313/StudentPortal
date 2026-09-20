@@ -1,9 +1,8 @@
 ﻿namespace StudentPortal.Web.Models.Entities
 {
-    public class Student
+    public class EditStudentViewModel
     {
         public Guid Id { get; set; }
-
         public string Name { get; set; }
 
         public string Email { get; set; }
