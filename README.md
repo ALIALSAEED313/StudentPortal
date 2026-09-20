@@ -75,3 +75,24 @@ If you want, I can also:
 - Add Bootstrap Icons CDN snippet to _Layout.cshtml
 - Create an EF Core migration template
 
+## Routes
+
+The application uses conventional MVC routing (default route pattern: `{controller=Home}/{action=Index}/{id?}`). Key routes available in this project:
+
+- Home
+  - GET  /                    -> HomeController.Index (Home page)
+  - GET  /Home/Privacy        -> HomeController.Privacy (Privacy policy)
+
+- Students (Student management)
+  - GET  /Students/List       -> StudentsController.List (list all students)
+  - GET  /Students/Add        -> StudentsController.Add (show add form)
+  - POST /Students/Add        -> StudentsController.Add (create new student) — requires antiforgery token
+  - GET  /Students/Details/{id} -> StudentsController.Details (view student details)
+  - GET  /Students/Edit/{id}  -> StudentsController.Edit (show edit form)
+  - POST /Students/Edit       -> StudentsController.Edit (submit edits) — requires antiforgery token
+  - POST /Students/Delete     -> StudentsController.Delete (delete student) — uses POST form with antiforgery token
+
+Notes:
+- All POST actions expect antiforgery tokens. Ensure forms include `@Html.AntiForgeryToken()` or use the `form` tag helper, which injects it automatically.
+- Route URLs shown above follow the default routing configuration. If you changed routing in Startup/Program, adjust accordingly.
+
